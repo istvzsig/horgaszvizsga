@@ -1,0 +1,18 @@
+import QUESTIONS from './questions.js';
+
+export default class QuestionsList {
+  static questions = QUESTIONS || [];
+  static addQuestion(question) {
+    this.questions = [...this.questions, question];
+  }
+  static getRandomQuestion() {
+    const randomIndex = Math.random() * this.questions.length - 1 | 0;
+    return this.questions[randomIndex];
+  }
+  static getQuestionById(id) {
+    return this.questions.find(question => question.id === id);
+  }
+  static deleteQuestionById(id) {
+    this.questions = this.questions.filter(question => question.id !== id);
+  }
+}

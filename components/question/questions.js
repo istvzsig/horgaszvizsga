@@ -1,0 +1,846 @@
+export default [
+  {
+    id: 0,
+    image: '',
+    question: 'Legfeljebb mekkora területű csalihalfogó emelőháló használható csalihal fogására',
+    options: [
+      '2 negyzetmeter',
+      '1 negyzetmeter',
+      '1.5 negyzetmeter',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 1,
+    image: '',
+    question: 'A horgászat során szablyosan kifogott és elvinni kívánt halat a vizpartról',
+    options: [
+      'élö állapotban sak akkor szabad elszállitani (pl. salihalnak), ha 30 cm testhosszúságot nem haladja meg.',
+      'csakis gyorsan és kiméletesen leölve szabad elszállitani.',
+      'éló állapotban is elszállithatjuk.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 2,
+    image: '',
+    question: `A vonatkozó jogszablyban megállapitott fajlagos tilalmi idök általánosan az elsö nap nulla rakor kezdödnek és az
+    utolsó nap huszonnegyedik órájában végzödnek. Ha az elsö nap szombatra vagy pihenönapra esik, akkor`,
+    options: [
+      'a tilalom az azt megelözö munkanapon lép érvénybe.',
+      'a tilalom az azt követö munkanapon lép érvénybe.',
+      'az a tilalom kezdö napját nem érinti.',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 3,
+    image: '',
+    question: `Mi a teendö akkor, ha nem tudja teljes biztonsággal meghatározni a fogott hal faját, de az kizárható, hogy
+    idegenhonos inváziós fajról van szó?`,
+    options: [
+      'ha legalább 40 cm-es a fogott hal, akkor nyugodtan megtarthatom',
+      'haltartó szákba teszem, majo a horgászat befejeztével visszaengedem',
+      'méreten aluli, vagy védett, de akár „nem foghato" halfaj is lehet, ezért érdemes azonnal visszaengednem a vizbe',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 4,
+    image: '',
+    question: `Ha a horog nem belülröl akadt a hal szájába, akkor azt a halat a horgász...`,
+    options: [
+      'akkor tarthatja meg, ha a horog valahol a hal fejrészén akadt meg.',
+      'akkor tarthatja meg, ha inváziós halfajról van szó, hiszen azokat nem szabad visszaengedni.',
+      'nem tarthatja meg.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 5,
+    image: '',
+    question: `Halgazdálkodásra jogosulttal rendelkezö nyilvántartott halgazdálkodási vizterületen való horgászat elött a horgász
+    kötelessege ...`,
+    options: [
+      'tájékozódni a vonatkozó jogszabályban foglalt rendelkezésektöl eltérö helyi szabályokról.',
+      'horgászkészségeit halfogásra alkalmassá tenni.',
+      'eldönteni, hogy milyen horgászmódszert fog alkalmazni.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 6,
+    image: '',
+    question: `Ha a nylvantartott halgazdalkodasi vizteruletnek van halgazdalkodasra jogosultja, akkor a jogszeru horgaszathoz ...`,
+    options: [
+      'állami horgászjegy vagy turista állami horgászjegy, valamint a vizterületre érvényes területi jegy is szükséges.',
+      'csak érvényes teruleti jeggyel kell rendelkezni, állami horgászjegy vagy turista állami horgásziegy valtsa ebben az esetben nem kotelezo',
+      'turista állami horgászjegy birtokában területi jegy váltása nem kötelezö.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 7,
+    image: '',
+    question: `Horgászat során kifogott, megtartani kívánt darabszám-korlátozással védett hal fogási adatait mikor rögzitem a fogási naplopa?`,
+    options: [
+      'a fogást követöen azonnal',
+      'a vizpart elhagyása elött',
+      'a horgászat befejezése elött',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 8,
+    image: '',
+    question: `Hazánkban a horgászati tevékenység végzéséhez érvényes állami horgászjegy vagy turista állami horgászjegy ...`,
+    options: [
+      'minden vizterületen szükséges.',
+      'csak akkor sZükséges, ha shonos halfajok egyedeit akarja a horgász megtartani.',
+      'magántulajdonban lévö tavak, halastavak esetében nem szükséges.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 9,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz a „természetvédelmi oltalom alatt állo"
+    halfajokra?`,
+    options: [
+      'a fogást követöen haladéktalanul vissza kell helyezni a vizbe',
+      'a halgazdálkodási hatóság foghatóvá nyilvánithatja',
+      'a fogást követöen tilos visszahelyezni a vizbe',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 10,
+    image: '',
+    question: `Az alabbi lehetosegek kozul melyik jelenti a hal kifogasat"?`,
+    options: [
+      'a megfogott hal vizpartra történó kiemelése',
+      'a megtartani kívánt hal haltartó szákba helyezése és a fogási naplóba való bejegyzése',
+      'a hal horgászat során történö megfogása, majd ezt követöen vizbe visszaengedése',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 11,
+    image: '',
+    question: `Horgászatra jogositó okmányokkal rendelkezö személy mikor szerzi meg a megfogott hal tulajdonjogát?`,
+    options: [
+      'a hal jogszerü kifogásával',
+      'a hal megfogásával, majo a hal vizpartról való elvitelével',
+      'a hal jogszerü kifogásával és a fogási naplóban való rögzitésével',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 12,
+    image: '',
+    question: `A horgászat során szablyosan kifogott és elvinni kívánt halat a vizpartról`,
+    options: [
+      'élö állapotban sak akkor szabad elszállitani (pl. salihalnak), ha 30 cm testhosszúságot nem haladja meg.',
+      'csakis gyorsan és kiméletesen leölve szabad elszállitani.',
+      'éló állapotban is elszállithatjuk.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 13,
+    image: '',
+    question: `A vonatkozó jogszablyban megállapitott fajlagos tilalmi idök általánosan az elsö nap nulla rakor kezdödnek és az
+    utolsó nap huszonnegyedik órájában végzödnek. Ha az elsö nap szombatra vagy pihenönapra esik, akkor...`,
+    options: [
+      'a tilalom az azt megelözö munkanapon lép érvénybe.',
+      'a tilalom az azt követö munkanapon lép érvénybe.',
+      'az a tilalom kezdö napját nem érinti.',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 14,
+    image: '',
+    question: `A hal testhossza, azaz a fogási méret...`,
+    options: [
+      'a hal oldalán, az orresúcstól a farokúszó tövéig mért távolság.',
+      'a hal oldalán, az orrcsúcstól a farokúszó végéig mért távolsag.',
+      'a hal hasán, a szájnyilástól a farokúszó végéig mért távolság.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 15,
+    image: '',
+    question: `Mi a helyes teendö akkor, ha nem tudja teljes biztonsággal meghatározni a fogott hal faját, de az kizárható, hogy
+    idegenhonos inváziós fajról van szó?`,
+    options: [
+      'ha legalább 40 cm-es a fogott hal, akkor nyugodtan megtarthatom',
+      'haltartó szákba teszem, majo a horgászat befejeztével visszaengedem',
+      'méreten aluli, vagy védett, de akár „nem foghato" halfaj is lehet, ezért érdemes azonnal visszaengednem a vizbe',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 16,
+    image: '',
+    question: `Halgazdalkodasra jogosulttal rendelkezo nyilvantartott halgazdalkodasi vizteruleten való horgaszat elott a horgasz
+    kötelessége ...`,
+    options: [
+      'tájékozódni a vonatkozó jogszablyban foglalt rendelkezésektöl eltéró helyi szabályokról.',
+      'horgászkészségeit halfogásra alkalmassá tenni.',
+      'eldönteni, hogy milyen horgászmódszert fog alkalmazni.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 17,
+    image: '',
+    question: `Ha a nylvantartott halgazdalkodasi vizteruletnek van halgazdalkodasra jogosultja, akkor a jogszeru horgaszathoz ...`,
+    options: [
+      'állami horgászjegy vagy turista állami horgászjegy, valamint a vizterületre érvényes területi jegy is szükséges.',
+      'csak érvényes teruleti jeggyel kell rendelkezni, állami horgászjegy vagy turista állami horgásziegy valtasa ebben az esetben nem kötelezö.',
+      'turista állami horgászjegy birtokában területi jegy váltása nem kötelezö.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 18,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz a „természetvédelmi oltalom alatt állo"
+    halfajokra?`,
+    options: [
+      'a fogást követöen haladéktalanul vissza kell helyezni a vizbe',
+      'a halgazdálkodási hatóság foghatóvá nyilvánithatja',
+      'a fogást követöen tilos visszahelyezni a vizbe',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 19,
+    image: '',
+    question: `Az alabbi lehetosegek kozul melyik jelenti a ,hal kifogasat"?"
+    halfajokra?`,
+    options: [
+      'a megfogott hal vizpartra történó kiemelése',
+      'a megtartani kívánt hal haltartó szákba helyezése és a fogási naplóba való bejegyzése',
+      'a hal horgászat során történö megfogása, majd ezt követöen vizbe visszaengedése',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 20,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz az „inváziós idegenhonos" halfajokra?`,
+    options: [
+      'a kifogását mennyiségi-és méretkorlátozás nem védi',
+      'a kifogását darabszám-korlátozás védi, de mennyiségi-korlátozás nem',
+      'a kifogását méretkorlátozás védi',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 21,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz az „idegenhonos" (de nem inváziós) halfajokra?`,
+    options: [
+      'kifogását méretkorlátozás védi',
+      'kifogását darabszám-korlátozás védi',
+      'kifogását mennyiségi- és méreikorlátozás nem védi',
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 22,
+    image: '',
+    question: `A felsorolt anyagokból készült haltartó szákok közül melyik nem szolgálja a hal kíméletes megtartását?`,
+    options: [
+      'szövet',
+      'drót',
+      'müanyag',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 23,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz az „idegenhonos" (de nem inváziós) halfajokra?`,
+    options: [
+      'a fogást követöen vissza kell helyezni a vizbe',
+      'a fogást követöen vissza lehet helvezni a vizbe',
+      'a fogást követöen tilos visszahelyezni a vizbe',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 24,
+    image: '',
+    question: `Horgászat során egy nyilvántartott halgazdálkodási vizterületen megfogtam egy 60 cm testhosszúságot meghaladó
+    méretü pontyot. Ekkor megjelenik a helyi egyesület elnöke és azt állitja, hogy 50 cm felett vissza kell engednem a halat,
+    bár ezt a szablyt a hatályos helyi horgászrend nem tartalmazza, mit teszek?`,
+    options: [
+      'visszaengedem a halat, mert az egyesület elnöke mondja',
+      'csak akkor engedem vissza a halat, ha többen is igazolják ezt a megállapitást',
+      'mivel nincs a hatályos helyi horgászrendben ilyen szabály, igy nem követek el szabálysértést, ha elteszem a halat',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 25,
+    image: '',
+    question: `Horgászat során egy nyilvántartott halgazdálkodási vizterületen gyermek horgászként a haltartó szákomban van
+    kereken 5 kg dévérkeszeg, majd egymás után el kezdem fogni a bodorkákat. Mit tehetek a bodorkákkal?`,
+    options: [
+      `egyfajta keszegböl tarthatok meg naponta 5 kg-ot, tehát a bodorkákat is gyüthetem addig, mig szintén el nem
+      érem az 5kg-ot`,
+      'a bodorka védett faj, mindenképpen vissza kell engednem',
+      'vissza kell engednem, mert napi darabszám-korlátozással nem védett öshonos halakból csak 5 kg-ot tarthatok meg naponta',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 26,
+    image: '',
+    question: `A vonatkozó jogszably szerint mi a busa legisebb kifogható mérete?`,
+    options: [
+      `nincs fajlagos méretkorlátozása`,
+      '40 centimeter',
+      '50 centimeter',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 27,
+    image: '',
+    question: `Mikor van a pisztrángsügér fajlagos tilalmi idöszaka?`,
+    options: [
+      `nincs fajlagos tilalmi ideje`,
+      '04.15. - 05.31.',
+      '03.01. - 06.30.',
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 27,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A kövi csik hazánkban`,
+    options: [
+      `természetvédelmi oltalom alatt áll`,
+      'nem fogható',
+      'fogható',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 28,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A nyúldomolykó hazánkban`,
+    options: [
+      `természetvédelmi oltalom alatt áll`,
+      'nem fogható',
+      'fogható',
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 29,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A képen látható halfaj hazánkban ...`,
+    image: 'angolna.png',
+    options: [
+      `természetvédelmi oltalom alatt áll`,
+      'nem fogható',
+      'fogható',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 30,
+    image: '',
+    question: `A hazánkban elöforduló sikok közül melyik védett faj?`,
+    options: [
+      `mindegyik`,
+      'réti csik',
+      'bolgár csik',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 31,
+    image: '',
+    question: `Melyik hazai halfajunk faroknyelén látható kékeszöld csik?`,
+    options: [
+      `szivárványos ökle`,
+      'dévérkeszeg',
+      'paduc',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 32,
+    image: '',
+    question: `A felsoroltak közül melyik halfajunknak van „vésett" szája?`,
+    options: [
+      `bagolykeszeg`,
+      'ponty',
+      'paduc',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 33,
+    image: '',
+    question: `A hazánkban elöforduló gébek közül melyik védett faj?`,
+    options: [
+      `a tarka géb`,
+      'a tarka géb, a kaukázusi törpegéb és a csupasztorkú géb',
+      'egyik sem',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 34,
+    image: '',
+    question: `Melyik halfaj látható a képen?`,
+    options: [
+      `balin`,
+      'szivárványos ökle',
+      'szivárványos pisztráng',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 35,
+    image: '???',
+    question: `A vonatkozó jogszably serint mennyi a képen látható halfaj naponta kifogható mennyisége?`,
+    options: [
+      `3 kg`,
+      'nincs korlátozva',
+      '10 kg',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 36,
+    image: '',
+    question: `A hal testhossza, azaz a fogási méret...`,
+    options: [
+      `... a hal hasán, a szájnyilástól a farokúszó végéig mért távolság.`,
+      '... a hal oldalán, az orresúcstól a farokúszó végéig mért távolság.',
+      '... a hal oldalán, az orrcsúcstól a farokúszó tövéig mért távolság.',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 37,
+    image: '',
+    question: `Ha a horog nem belütröl akadt a hal szájába, akkor azt a halat a horgász ...`,
+    options: [
+      `... akkor tarthatja meg, ha a horog valahol a hal fejrészén akadt meg.`,
+      '... akkor tarthatja meg, ha inváziós halfajról van szó, hiszen azokat nem szabad visszaengedni.',
+      '... nem tarthatja meg.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 38,
+    image: '',
+    question: `Mi a helyes teendö akkor, ha nem tudja teljes biztonsággal meghatározni a fogott hal faját, de az kizárható, hogy idegenhonos
+inváziós fajról van szó?`,
+    options: [
+      `haltartó szákba teszem, majd a horgászat befejeztével visszaengedem`,
+      'méreten aluli, vagy védett, de akár „nem foghat", halfaj is lehet, ezért érdemes azonnal visszaengednem a vizoe',
+      'ha legalább 40 cm-es a fogott hal, akkor nyugodtan megtarthatom',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 39,
+    image: '',
+    question: `Allami horgászjeggyel és területi jeggyel rendelkezö felnött személy egy nyilvántartott halgazdálkodási vizterületen a vonatkozó
+jogszably szerint a darabszam-korlatozas alá eso shonos halfajokból fajonkent naponta, ha a helyi horgaszrend nem rendelkezik
+szigorúbban ...`,
+    options: [
+      `... fajonként legfeljebb 2 darabot foghat ki.`,
+      '... fajonként legfeljebb 3 darabot foghat ki.',
+      '... fajonként legfeljebb 1 darabot foghat ki.',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 40,
+    image: '',
+    question: `Az alábbi lehetöségek közül melyik felsorolás nem tartalmaz a törvény által tiltott halfogási módszert?`,
+    options: [
+      `múlegyezés, pickerezés, spiccbotozás, úszózás orsós bottal`,
+      'sorhorgozás, mülegyezés, feederezés, sleppelés, úszózás',
+      'pergetés, sapóhorgozás, behordás, fenekezö horgászat',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 41,
+    image: '',
+    question: `Horgászat során a vonatkozó jogszably szerint engedélyezett a sorhorog használata?`,
+    options: [
+      `nem, tiltott halfogási módszernek és eszköznek minösül`,
+      'igen',
+      'csak ha a helyi horgászrendben engedélyezett a használata',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 42,
+    image: '',
+    question: `На egy személyt halfogásra jogositó okmányok teljes hiányában való horgászat során intézkedés alá vonnak a halörök, milyen
+következményekre szamithat?`,
+    options: [
+      `halvédelmi birsag`,
+      'halvédelmi birság vagy engedély váltásától való eltiltás',
+      'csak ha a helyi horgászrendben engedélyezett a használatahalvédelmi birság és engedély váltásától való eltiltás',
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 43,
+    image: '',
+    question: `Horgászat során kifogott, megtartani kívánt darabszám-korlátozással védett hal fogási adatait mikor rögzitem a fogási naplóba?`,
+    options: [
+      `a vizpart elhagyása elött`,
+      'a fogást követöen azonnal',
+      'a horgászat befejezése elött',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 44,
+    image: '',
+    question: `Az alábbi lehetöségek közül melyik jelenti a „hal kifogását"?`,
+    options: [
+      `a megfogott hal vizpartra történö kiemelése`,
+      'a megtartani kívánt hal haltartó szákba helyezése és a fogási naplóba való bejegyzése',
+      'a hal horgászat során történö megfogása, majd ezt követöen vizbe visszaengedése',
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 45,
+    image: '',
+    question: `Horgászatra jogositó okmányokkal rendelkezö személy mikor szerzi meg a megfogott hal tulajdonjogát?`,
+    options: [
+      `a hal jogszerü kifogásával és a fogási naplóban való rögzitésével`,
+      'a hal jogszerü kifogásával',
+      'a hal megfogásával, majd a hal vizpartról való elvitelével',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 46,
+    image: '',
+    question: `Halgazdálkodásra jogosulttal rendelkezö nyilvántartott halgazdálkodási vizterületen való horgászat elött a horgász kötelessége ...`,
+    options: [
+      `... tájékozódni a vonatkozó jogszabályban foglalt rendelkezésektöl eltérö helyi szabályokról.`,
+      '... eldönteni, hogy milyen horgászmódszert fog alkalmazni.',
+      '... horgászkészségeit halfogásra alkalmassá tenni.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 47,
+    image: '',
+    question: `Hazánkban a horgászati tevékenység végzéséhez érvényes állami horgászjegy vagy turista állami horgászjegy ...`,
+    options: [
+      `... minden vizterületen szükséges.`,
+      '... magántulajdonban lévö tavak, halastavak esetében nem szükséges.',
+      '... csak akkor szükséges, ha shonos halfajok egyedeit akarja a horgász megtartani.',
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 48,
+    image: '',
+    question: `Ha a nyilvántartott halgazdálkodási vizterületnek van halgazdálkodásra jogosultja, akkor a jogszerü horgászathoz ...`,
+    options: [
+      `... allami horgászjegy vagy turista állami horgásziegy, valamint a vizterületre érvényes területi jegy is szükséges.`,
+      `... turista állami horgászjegy birtokában területi jegy váltása nem kötelezö.`,
+      `... sak érvényes területi jegyel kell rendelkezni, llami horgászjegy vagy turista llami horgászjegy vttsa ebben az esetben nem kotelezo`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 49,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz a „természetvédelmi oltalom alatt áll'" halfajokra?`,
+    options: [
+      `a fogást követöen haladéktalanul vissza kell helyezni a vizbe`,
+      `a halgazdálkodási hatóság foghatóvá nyilvánithatja`,
+      `a fogást követöen tilos visszahelyezni a vizbe`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 50,
+    image: '',
+    question: `Az alábbi lehetöségek közül a vonatkozó jogszably szerint melyik igaz az „öshonos" halfajokra?`,
+    options: [
+      `a kifogását mennyiségi- és méretkorlátozás is védheti`,
+      `a kifogását csak darabszám-korlátozás védi`,
+      `a kifogását csak méretkorlátozás védi`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 51,
+    image: '',
+    question: `Az allami horgászjegy sak annak az ifjúsági horgásznak adható ki, aki ...`,
+    options: [
+      `... rendelkezik horgászvizsgával és érvényes horgászegyesületi tagsággal.`,
+      `... rendelkezik Magyar Horgászkártyával (ill. annak sikeres kézbesitéséig az igazolásul szolgáló nyilatkozattal), és adott évre érvényes horgászegyesületi tagsággal, továbbá az állami horgászvizsga vagy korábban érvényes állami horgászjegy meglétét igazolni tudja`,
+      `... rendelkezik horgászvizsgával, Magyar Horgászkártyával és érvényes területi jeggyel.`,
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 52,
+    image: '',
+    question: `Mit jelent a „helyi horgászrend"?`,
+    options: [
+      `olyan kötelezö helyi szabályzat, amely a vonatkozó jogszabályoktól eltérö enyhitéseket tartalmaz az adott vizterületre`,
+      `olyan kötelezö helyi szablyzat, amely a vonatkozó jogszablyoktol eléro szigoritásokat tartalmaz az adott vizterületre`,
+      `olyan kötelezö helyi szablyzat, amely a vonatkozó jogszabályoktól eltérö szigoritásokat és akár (halgazdálkodási hatóság által jóváhagyott) enyhitéseket is tartalmaz az adott vizterületre`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 53,
+    image: '',
+    question: `Ha egy halgazdálkodási vizterületen kiméleti terület került kijelölésre, a halgazdálkodásra jogosultnak kötelessége a horgászoknak ...`,
+    options: [
+      `... legalább szóban tájékoztatást adni az elhelyezkedéséröl.`,
+      `... a területi jegyen, vagy a mellékelt tájékoztatóban feltüntetni az elhelyezkedését.`,
+      `... a területi jegyen, vagy a mellékelt tájékoztatóban feltüntetni az elhelyezkedését és a halfogási tilalom hatályat.`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 54,
+    image: '',
+    question: `Horgászat során egy nyilvántartott halgazdálkodási vizterületen megfogtam egy 60 cm testhosszúságot meghaladó méret pontyot. Ekkor megjelenik a helyi egyesület elnöke és azt allitja, hogy 50 cm felett vissza kell engednem a halat, bar ezt a szabalyt a hatályos helyi horgászrend nem tartalmazza, mit teszek?`,
+    options: [
+      `csak akkor engedem vissza a halat, ha többen is igazolják ezt a megállapitást`,
+      `visszaengedem a halat, mert az egyesület elnöke mondja`,
+      `mivel nincs a hatályos helyi horgászrendben ilyen szably, igy nem követek el szabálysértést, ha elteszem a halat`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 55,
+    image: '',
+    question: `Ha egy nyilvántartott halgazdálkodási vizterületen horgászom augustus 15-énés megfogok egy 40 cm testhosszúságú pontyot,
+majd egy másik horgász azt mondja, hogy ezen a tavon csak a 45 cm-nél hosszabb pontyot lehet hazavinni, mit teszek?`,
+    options: [
+      `megnézem a helyi horgászrendet, és ha nincs ilyen szably benne, akkor megtarthatom a halat`,
+      `nem foglalkozom a horgász okoskodásával, biztos nekem van igazam`,
+      `csak akkor engedem vissza, ha többen is ezt állitják`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 56,
+    image: '',
+    question: `A vonatkozó jogszably szerint mennyi a razbóra naponta kifogható mennyisége?`,
+    options: [
+      `3 db`,
+      `3 kg`,
+      `nincs korlátozva`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 57,
+    image: '',
+    question: `A vonatkozó jogszably szerint mennyi az amur naponta kifogható mennyisége?`,
+    options: [
+      `10 kg`,
+      `3 db`,
+      `nincs korlátozva`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 58,
+    image: '',
+    question: `Melyik halfaj látható a képen?`,
+    options: [
+      `fenékjáró küllö`,
+      `márna`,
+      `paduc`,
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 59,
+    image: '',
+    question: `Melyik halfaj látható a képen?`,
+    options: [
+      `dévérkeszeg`,
+      `balin`,
+      `jászkeszeg`,
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 60,
+    image: './img/id_60_voros_szarnyu_keszeg.png',
+    question: `Válassza ki a helyes megoldást! A képen látható halfaj hazánkban ...`,
+    options: [
+      `invaziv idegenhonos`,
+      `öshonos`,
+      `idegenhonos`,
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 61,
+    image: './img/id_60_voros_szarnyu_keszeg.png',
+    question: `Melyik halfaj látható a képen?`,
+    options: [
+      `vörösszárnyú keszeg`,
+      `dévérkeszeg`,
+      `jászkeszeg`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 62,
+    image: '',
+    question: `Melyik halfaj látható a képen?`,
+    options: [
+      `lapos keszeg`,
+      `amur`,
+      `domolykó`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 63,
+    image: 'harcsa',
+    question: `A vonatkozó jogszably serint mennyi a képen látható halfaj naponta kifogható mennyisége?`,
+    options: [
+      `3 kg`,
+      `3 db`,
+      `10 kg`,
+    ],
+    correctAnswerId: 1,
+  },
+  {
+    id: 64,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A pénzes pér hazánkban ...`,
+    options: [
+      `idegenhonos`,
+      `invaziv idegenhonos`,
+      `oshonos`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 65,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A vágó durbincs hazánkban ...`,
+    options: [
+      `nem fogható`,
+      `természetvédelmi oltalom alatt áll`,
+      `fogható`,
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 66,
+    image: '',
+    question: `Mennyi a jászkeszeg naponta kifogható mennyisége?`,
+    options: [
+      `5 kg`,
+      `10 kg`,
+      `3 kg`,
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 67,
+    image: '',
+    question: `Mikor van a karika keszeg fajlagos tilalmi idöszaka?`,
+    options: [
+      `05.02. - 06.15.`,
+      `04.15. - 05.31.`,
+      `nincs fajlagos tilalmi ideje`,
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 68,
+    image: '',
+    question: `Mikor van a márna fajlagos tilalmi idöszaka?`,
+    options: [
+      `05.02. - 05.31.`,
+      `nincs fajlagos tilalmi ideje`,
+      `04.15. - 05.31.`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 69,
+    image: '',
+    question: `A vonatkozó jogszably szerint mi a bagolykeszeg legkisebb kifogható mérete?`,
+    options: [
+      `20 cm`,
+      `nincs fajlagos méretkorlátozása`,
+      `30 cm`,
+    ],
+    correctAnswerId: null,
+  },
+  {
+    id: 70,
+    image: '',
+    question: `A vonatkozó jogszably szerint mi a laposkeszeg legkisebb kifogható mérete?`,
+    options: [
+      `20 cm`,
+      `nincs fajlagos méretkorlátozása`,
+      `30 cm`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 71,
+    image: '',
+    question: `A vonatkozó jogszably szerint mi a laposkeszeg legkisebb kifogható mérete?`,
+    options: [
+      `20 cm`,
+      `15 cm`,
+      `nincs fajlagos méretkorlátozása`,
+    ],
+    correctAnswerId: 2,
+  },
+  {
+    id: 72,
+    image: '',
+    question: `Válassza ki a helyes megoldást! A menyhal hazánkban ...`,
+    options: [
+      `öshonos`,
+      `idegenhonos`,
+      `invazív idegenhonos`,
+    ],
+    correctAnswerId: 0,
+  },
+  {
+    id: 73,
+    image: '',
+    question: `Ha a horog nem belütröl akadt a hal szájába, akkor azt a halat a horgász ...`,
+    options: [
+      `... akkor tarthatja meg, ha a horog valahol a hal fejrészén akadt meg.`,
+      `... akkor tarthatja meg, ha inváziós halfajról van szó, hiszen azokat nem szabad visszaengedni.`,
+      `... nem tarthatja meg.`,
+    ],
+    correctAnswerId: 0,
+  },
+];
