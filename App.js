@@ -5,7 +5,7 @@ import QuestionComponent from "./components/question/QuestionComponent.js";
 export default class App {
   constructor() {
     this.app = new HTMLElement('div', this.constructor.name);
-    this.player = new Player();
+    this.player = new Player("Silent Bob");
     this.questionComponent = new QuestionComponent(this.player);
   }
   update() {
@@ -15,10 +15,10 @@ export default class App {
     window.requestAnimationFrame(this.update.bind(this));
   }
   start() {
-    document.body.append(this.app.element);
-    this.player.addAnswerValueEvent();
     this.player.addSaveQuestionEvent();
+    this.player.addAnswerValueEvent();
     this.questionComponent.render(this.app);
+    document.body.append(this.app.element);
 
     this.update();
   }

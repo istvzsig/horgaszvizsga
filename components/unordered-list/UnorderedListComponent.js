@@ -13,7 +13,7 @@ export default class UnOrderedListComponent extends HTMLElement {
     item.options.forEach((option, index) => {
       const li = new ListItemComponent({
         text: option,
-        eventName: SET_ANSWER,
+        eventType: SET_ANSWER,
         index: index,
       });
       li.render(this);
@@ -23,10 +23,10 @@ export default class UnOrderedListComponent extends HTMLElement {
 }
 
 class ListItemComponent extends HTMLElement {
-  constructor({ text = "", eventName = "", index = null }) {
+  constructor({ text = "", eventType = "", index = null }) {
     const optionIndex = index === 0 ? "A" : index === 1 ? "B" : "C"
     super('li', 'answer-options-item');
-    this.eventName = eventName;
+    this.eventType = eventType;
     this.attributeName = 'option-index';
     this.changeText(`${optionIndex}: ${text}`);
     this.element.setAttribute(this.attributeName, optionIndex);
@@ -43,7 +43,7 @@ class ListItemComponent extends HTMLElement {
     event.preventDefault();
     this.isActive = true;
     EventManager.dispatchEvent({
-      eventName: this.eventName,
+      eventType: this.eventType,
       data: { answerValue: this.element.getAttribute(this.attributeName) }
     });
   }

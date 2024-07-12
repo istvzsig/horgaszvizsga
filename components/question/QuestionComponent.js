@@ -18,13 +18,13 @@ export default class QuestionComponent extends HTMLElement {
 
     this.submitAnswerButton = new Button({
       text: "Submit Answer",
-      eventName: SUBMIT_ANSWER,
+      eventType: SUBMIT_ANSWER,
       isDisabled: true,
     });
 
     this.saveQuestionButton = new Button({
       text: "Save for later",
-      eventName: SAVE_QUESTION,
+      eventType: SAVE_QUESTION,
       isDisabled: false,
     });
   }

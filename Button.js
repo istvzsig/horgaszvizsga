@@ -2,10 +2,10 @@ import HTMLElement from './components/HTMLElement.js';
 import EventManager from '../../EventManager.js';
 
 export default class Button extends HTMLElement {
-  constructor({ text = "", eventName = "", isDisabled = false }) {
+  constructor({ text = "", eventType = "", isDisabled = false }) {
     super('button', 'btn')
     this.changeText(text);
-    this.eventName = eventName;
+    this.eventType = eventType;
     this.element.disabled = isDisabled;
     this.element.addEventListener('mousedown', this.handleMouseDown.bind(this));
     this.element.addEventListener('mouseup', this.handleMouseUp.bind(this));
@@ -15,9 +15,10 @@ export default class Button extends HTMLElement {
   }
   handleMouseDown(event) {
     event.preventDefault();
-    EventManager.dispatchEvent(this.eventName);
+    EventManager.dispatchEvent({ eventType: this.eventType });
   }
   handleMouseUp(event) {
     event.preventDefault();
+
   }
 }

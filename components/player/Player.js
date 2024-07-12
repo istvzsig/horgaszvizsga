@@ -1,4 +1,4 @@
-import { SAVE_QUESTION, SET_ANSWER, SUBMIT_ANSWER } from '../../config.js';
+import { SET_ANSWER, SUBMIT_ANSWER, SAVE_QUESTION } from '../../config.js';
 import EventManager from '../../EventManager.js';
 
 export default class Player {
@@ -16,33 +16,34 @@ export default class Player {
     return this.answerValue;
   }
   addAnswerValueEvent() {
-    EventManager.createEvent({
+    EventManager.addEvent({
       element: window,
-      eventName: SET_ANSWER,
+      eventType: SET_ANSWER,
       handlerFunc: (event) => {
         this.setAnswerValue(event.detail.answerValue);
       }
     });
   }
   addSubmitAnswerEvent() {
-    EventManager.createEvent({
+    EventManager.addEvent({
       element: window,
-      eventName: SUBMIT_ANSWER,
-      handlerFunc: () => {
+      eventType: SUBMIT_ANSWER,
+      handlerFunc: (event) => {
         if (this.answerValue) {
           this.questions = [...this.questions, {
             question: this.question,
             isCorrectlyAnswered:
               this.answerValue === this.question.correctAnswerId,
           }];
+          console.log("kabare'")
         }
       },
     });
   }
   addSaveQuestionEvent() {
-    EventManager.createEvent({
+    EventManager.addEvent({
       element: window,
-      eventName: SAVE_QUESTION,
+      eventType: SAVE_QUESTION,
       handleFunc: () => {
         this.savedQuestions = [...this.savedQuestion, { ...this.question, savedAnswer: this.answerValue }];
         console.log("addSaveQuestionEvent");
