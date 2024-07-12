@@ -12,6 +12,9 @@ export default class QuestionsList {
   static getQuestionById(id) {
     return this.questions.find(question => question.id === id);
   }
+  static saveQuestionForPlayer(question, player) {
+    // player.questions
+  }
   static deleteQuestionById(id) {
     this.questions = this.questions.filter(question => question.id !== id);
   }

@@ -2,8 +2,10 @@ import HTMLElement from '../HTMLElement.js';
 import EventManager from '../../EventManager.js';
 import { SET_ANSWER } from '../../config.js';
 
-export default class UnorderedListComponent extends HTMLElement {
-  constructor(item) {
+
+
+export default class UnOrderedListComponent extends HTMLElement {
+  constructor() {
     super('ul', 'answer-options');
     this.list = [];
   }
@@ -15,22 +17,27 @@ export default class UnorderedListComponent extends HTMLElement {
         index: index,
       });
       li.render(this);
+      li.setStyle();
     });
   }
 }
 
 class ListItemComponent extends HTMLElement {
   constructor({ text = "", eventName = "", index = null }) {
+    const optionIndex = index === 0 ? "A" : index === 1 ? "B" : "C"
     super('li', 'answer-options-item');
     this.eventName = eventName;
     this.attributeName = 'option-index';
-    this.addText(text);
-    this.element.setAttribute(this.attributeName, index);
+    this.changeText(`${optionIndex}: ${text}`);
+    this.element.setAttribute(this.attributeName, optionIndex);
     this.element.addEventListener('mousedown', this.handleMouseDown.bind(this));
     this.element.addEventListener('mouseup', this.handleMouseUp.bind(this));
+    this.isActive = false;
   }
-  setStyle(style = { property, value }) {
-    this.element.style[property] = value;
+  setStyle() {
+    if (this.isActive) {
+      this.element.style.backgroundColor = 'red';
+    }
   }
   handleMouseDown(event) {
     event.preventDefault();

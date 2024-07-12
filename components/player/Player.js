@@ -6,18 +6,18 @@ export default class Player {
     this.name = name;
     this.question = null;
     this.questions = [];
+    this.skippedQuestions = [];
     this.answerValue = undefined;
-    this.setAnswerValueEvent()
   }
   setAnswerValue(value) {
     this.answerValue = value;
   }
-  setAnswerValueEvent() {
+  addAnswerValueEvent() {
     EventManager.createEvent({
       element: window,
       eventName: SET_ANSWER,
       handlerFunc: (event) => {
-        this.setAnswerValue(Number(event.detail.answerValue));
+        this.setAnswerValue(event.detail.answerValue);
       }
     });
   }

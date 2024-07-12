@@ -4,7 +4,7 @@ export default class HTMLElement {
     this.element = document.createElement(this.type);
     this.element.className = classname;
   }
-  addText(text) {
+  changeText(text) {
     this.element.innerText = text;
   }
   render(parentComponent) {
