@@ -6,11 +6,14 @@ export default class Player {
     this.name = name;
     this.question = null;
     this.questions = [];
-    this.skippedQuestions = [];
-    this.answerValue = undefined;
+    this.savedQuestions = [];
+    this.setAnswerValue(undefined);
   }
   setAnswerValue(value) {
     this.answerValue = value;
+  }
+  getAnswerValue() {
+    return this.answerValue;
   }
   addAnswerValueEvent() {
     EventManager.createEvent({
@@ -21,26 +24,29 @@ export default class Player {
       }
     });
   }
-  submitAnswer() {
+  addSubmitAnswerEvent() {
     EventManager.createEvent({
       element: window,
       eventName: SUBMIT_ANSWER,
       handlerFunc: () => {
         if (this.answerValue) {
-          this.questions.push({
+          this.questions = [...this.questions, {
             question: this.question,
             isCorrectlyAnswered:
               this.answerValue === this.question.correctAnswerId,
-          });
+          }];
         }
       },
     });
   }
-  saveQuestion() {
+  addSaveQuestionEvent() {
     EventManager.createEvent({
       element: window,
       eventName: SAVE_QUESTION,
-      handleFunc: () => console.log(SAVE_QUESTION)
+      handleFunc: () => {
+        this.savedQuestions = [...this.savedQuestion, { ...this.question, savedAnswer: this.answerValue }];
+        console.log("addSaveQuestionEvent");
+      }
     })
   }
 }

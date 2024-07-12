@@ -2,15 +2,10 @@ export default class EventManager {
   static createEvent({ element, eventName, handlerFunc, ...args }) {
     element.addEventListener(eventName, handlerFunc, args);
   }
-  static dispatchCustomEvent(eventName, data = {}) {
+  static dispatchEvent({ eventName, data = null }) {
     // console.log("dispatchEvent:", eventName);
-    // console.log("data:", data);
-    window.dispatchEvent(new CustomEvent(eventName, {
-      detail: data
-    }))
-  }
-  static dispatchEvent(eventName) {
-    // console.log("dispatchEvent:", eventName);
-    window.dispatchEvent(new Event(eventName));
+    window.dispatchEvent(data
+      ? new CustomEvent(eventName, { detail: data })
+      : new Event(eventName));
   }
 }

@@ -41,12 +41,14 @@ class ListItemComponent extends HTMLElement {
   }
   handleMouseDown(event) {
     event.preventDefault();
-    EventManager.dispatchCustomEvent(
-      this.eventName,
-      { answerValue: this.element.getAttribute(this.attributeName) }
-    );
+    this.isActive = true;
+    EventManager.dispatchEvent({
+      eventName: this.eventName,
+      data: { answerValue: this.element.getAttribute(this.attributeName) }
+    });
   }
   handleMouseUp(event) {
     event.preventDefault();
+    // this.setStyle();
   }
 }
