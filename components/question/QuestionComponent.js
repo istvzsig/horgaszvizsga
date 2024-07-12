@@ -14,13 +14,13 @@ export default class QuestionComponent extends HTMLElement {
     this.ul = new UnorderedListComponent();
 
     this.submitAnswerButton = new Button({
-      text: "SUBMIT ANSWER",
+      text: "Submit Answer",
       eventName: SUBMIT_ANSWER,
       isDisabled: true,
     });
 
-    this.nextQuestionButton = new Button({
-      text: "SAVE_QUESTION",
+    this.saveQuestionButton = new Button({
+      text: "Save for later",
       eventName: SAVE_QUESTION,
       isDisabled: false,
     });
@@ -30,14 +30,14 @@ export default class QuestionComponent extends HTMLElement {
   }
   render(parentComponent) {
     const newQuestionComponent = new QuestionComponent();
-    const newRandomQuestion = this.getRandomQuestion()
+    const newRandomQuestion = this.getRandomQuestion();
     newQuestionComponent.h1.addText(`${newRandomQuestion.id}. ${newRandomQuestion.question}`);
     newQuestionComponent.ul.createList(newRandomQuestion, true);
 
     [
       newQuestionComponent.h1,
       newQuestionComponent.ul,
-      this.nextQuestionButton,
+      this.saveQuestionButton,
       this.submitAnswerButton
     ]
       .forEach(element => element.render(newQuestionComponent));

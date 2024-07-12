@@ -15,7 +15,7 @@ export default class Button extends HTMLElement {
   }
   handleMouseDown(event) {
     event.preventDefault();
-    EventManager.dispatch(this.eventName);
+    EventManager.dispatchEvent(this.eventName);
   }
   handleMouseUp(event) {
     event.preventDefault();

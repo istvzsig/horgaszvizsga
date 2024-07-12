@@ -1,4 +1,4 @@
-import { SET_ANSWER, SUBMIT_ANSWER } from '../../config.js';
+import { SAVE_QUESTION, SET_ANSWER, SUBMIT_ANSWER } from '../../config.js';
 import EventManager from '../../EventManager.js';
 
 export default class Player {
@@ -7,20 +7,22 @@ export default class Player {
     this.question = null;
     this.questions = [];
     this.answerValue = undefined;
+    this.setAnswerValueEvent()
   }
   setAnswerValue(value) {
-    EventManager.emit({
+    this.answerValue = value;
+  }
+  setAnswerValueEvent() {
+    EventManager.createEvent({
       element: window,
       eventName: SET_ANSWER,
       handlerFunc: (event) => {
-        event.stopImmediatePropagation();
-        this.answerValue = Number(event.detail.answerValue);
-        console.log("answer value:", this.answerValue)
-      },
+        this.setAnswerValue(Number(event.detail.answerValue));
+      }
     });
   }
-  setQuestionAnswer() {
-    EventManager.emit({
+  submitAnswer() {
+    EventManager.createEvent({
       element: window,
       eventName: SUBMIT_ANSWER,
       handlerFunc: () => {
@@ -33,5 +35,12 @@ export default class Player {
         }
       },
     });
+  }
+  saveQuestion() {
+    EventManager.createEvent({
+      element: window,
+      eventName: SAVE_QUESTION,
+      handleFunc: () => console.log(SAVE_QUESTION)
+    })
   }
 }

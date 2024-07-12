@@ -9,38 +9,37 @@ export default class UnorderedListComponent extends HTMLElement {
   }
   createList(item, showCorrect = false) {
     item.options.forEach((option, index) => {
-      const li = new ListItemComponent({ option, index });
-      // this.list.push(li.element);
-      // EventManager.emit({
-      //   element: li.element,
-      //   eventName: "",
-      //   handlerFunc: () => li.changeColor(),
-      // })
+      const li = new ListItemComponent({
+        text: option,
+        eventName: SET_ANSWER,
+        index: index,
+      });
       li.render(this);
-      li.handleMouseDown();
     });
   }
 }
 
 class ListItemComponent extends HTMLElement {
-  constructor({ option, index }) {
+  constructor({ text = "", eventName = "", index = null }) {
     super('li', 'answer-options-item');
-    this.attributeName = 'anwser-option-index';
-    this.element.innerText = option;
+    this.eventName = eventName;
+    this.attributeName = 'option-index';
+    this.addText(text);
     this.element.setAttribute(this.attributeName, index);
-
+    this.element.addEventListener('mousedown', this.handleMouseDown.bind(this));
+    this.element.addEventListener('mouseup', this.handleMouseUp.bind(this));
   }
-  changeColor(color = 'red') {
-    this.element.style.backgroundColor = color;
+  setStyle(style = { property, value }) {
+    this.element.style[property] = value;
   }
-  handleMouseDown() {
-    this.element.addEventListener('mousedown', event => {
-      event.preventDefault();
-      const data = {
-        detail: { answerValue: event.target.getAttribute(this.attributeName) }
-      };
-      window.dispatchEvent(new CustomEvent(SET_ANSWER, data))
-      window.dispatchEvent(new Event('changecolor'));
-    });
+  handleMouseDown(event) {
+    event.preventDefault();
+    EventManager.dispatchCustomEvent(
+      this.eventName,
+      { answerValue: this.element.getAttribute(this.attributeName) }
+    );
+  }
+  handleMouseUp(event) {
+    event.preventDefault();
   }
 }

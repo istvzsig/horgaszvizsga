@@ -13,29 +13,16 @@ export default class App {
     this.player = new Player();
     this.errorTextComponent = new ErrorComponent();
     this.questionComponent = new QuestionComponent();
-
-    EventManager.emit({
-      element: window,
-      eventName: SAVE_QUESTION,
-      handlerFunc: () => this.renderRandomQuestion(),
-    })
-  }
-  renderRandomQuestion() {
-    this.player.setAnswerValue(undefined);
-    // this.player.setQuestionAnswer(this.randomQuestion);
-    this.errorTextComponent.addText("XXX");
-    this.questionComponent.render(this.app);
   }
   update() {
     if (this.player.answerValue !== undefined) {
-      // this.submitAnswerButton.setDisabled(false);
+      this.questionComponent.submitAnswerButton.setDisabled(false);
     }
     window.requestAnimationFrame(this.update.bind(this));
   }
   start() {
-    this.renderRandomQuestion();
-    this.update();
     document.body.append(this.app.element);
-
+    this.questionComponent.render(this.app);
+    this.update();
   }
 }
