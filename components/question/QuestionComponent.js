@@ -1,65 +1,61 @@
 import HTMLElement from '../HTMLElement.js';
 import UnOrderedListComponent from '../unordered-list/UnOrderedListComponent.js';
-import QuestionsList from './QuestionsList.js';
-import Button from '../../Button.js';
+import QuestionBook from './QuestionBook.js';
+import EventButton from '../Button.js';
 import EventManager from '../../EventManager.js';
 import ErrorComponent from '../ErrorComponent.js';
-
 import { SET_ANSWER, SUBMIT_ANSWER, SAVE_QUESTION } from '../../config.js';
 
 export default class QuestionComponent extends HTMLElement {
-  constructor(player) {
+  constructor(question) {
     super('div', 'question');
-    this.player = player;
-    this.h1 = new HTMLElement('h1', 'question-title');
-    this.ul = new UnOrderedListComponent();
+    this.question = question;
     this.errorComponent = new ErrorComponent();
-    this.question = this.getRandomQuestion();
+    this.h1 = new HTMLElement('h1', 'question-title');
+    this.ul = new UnOrderedListComponent(question);
 
-    this.submitAnswerButton = new Button({
+    this.submitAnswerButton = new EventButton({
       text: "Submit Answer",
       eventType: SUBMIT_ANSWER,
       isDisabled: true,
+      data: this.question,
     });
 
-    this.saveQuestionButton = new Button({
+    this.saveQuestionButton = new EventButton({
       text: "Save for later",
       eventType: SAVE_QUESTION,
       isDisabled: false,
+      data: this.question,
     });
   }
   getRandomQuestion() {
-    return QuestionsList.getRandomQuestion();
+    return QuestionBook.getRandomQuestion();
   }
   render(parentComponent) {
-    const newQuestionComponent = new QuestionComponent();
-    const newRandomQuestion = this.getRandomQuestion();
-    newQuestionComponent.h1.changeText(
-      `${newRandomQuestion.id}. ${newRandomQuestion.question}`
-    );
-    newQuestionComponent.ul.createList(newRandomQuestion, true);
+    this.h1.changeText(`${this.question.id}. ${this.question.question}`);
+    this.ul.createList(this.question, true);
     [
-      newQuestionComponent.h1,
-      newQuestionComponent.ul,
+      this.h1,
+      this.ul,
       this.saveQuestionButton,
       this.submitAnswerButton
     ]
-      .forEach(element => element.render(newQuestionComponent));
+      .forEach(element => element.render(this));
 
-    this.errorComponent.changeText("Please select one of the")
-    this.errorComponent.render(newQuestionComponent);
+    this.errorComponent.changeText("Please select one of the");
+    this.errorComponent.render(this);
 
     const element = parentComponent.element;
     if (element.children.length > 0) {
-      return element.firstChild.replaceWith(newQuestionComponent.element)
+      return element.firstChild.replaceWith(this.element);
     }
-    return element.append(newQuestionComponent.element)
+    return element.append(this.element);
   }
-  update() {
-    if (!this.player.answerValue) {
+  update(player) {
+    if (player.answerValue === undefined) {
       return this.submitAnswerButton.setIsDisabled(true);
     }
-    this.errorComponent.changeText(`You choose: ${this.player.answerValue}`);
+    this.errorComponent.changeText(`You choose: ${player.answerValue}`);
     this.submitAnswerButton.setIsDisabled(false);
   }
 }

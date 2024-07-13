@@ -1,7 +1,9 @@
 import QUESTIONS from './questions.js';
+import QuestionComponent from "./QuestionComponent.js";
 
-export default class QuestionsList {
+export default class QuestionBook {
   static questions = QUESTIONS || [];
+
   static addQuestion(question) {
     this.questions = [...this.questions, question];
   }

@@ -7,6 +7,9 @@ export default class HTMLElement {
   changeText(text) {
     this.element.innerText = text;
   }
+  changeStyle({ property, value }) {
+    this.element.style[property] = value;
+  }
   render(parentComponent) {
     parentComponent.element.append(this.element);
   }
